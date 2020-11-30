@@ -5,14 +5,19 @@
   "main": "(index.js) server.js",
   "scripts": {
     "test": "\"Hello world from Express!\"",
-    "client": "npm run start --prefix react-plants-app/src",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"cd react-plants-app/src && npm start\"",
+    "client": "npm run start --prefix meds-assignemnt-1/src",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"cd meds-assignemnt-1/src && npm start\"",
     "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.0",
     "axois": "0.0.1-security",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.5.3",
