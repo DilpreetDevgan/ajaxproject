@@ -55,9 +55,7 @@ const MedsList = () => {
                 <tbody>
                     {renderBody()}
                 </tbody>
-                <tfoot>
-                data not showing
-                </tfoot>
+               
             </table>
         </>
     )

@@ -5,9 +5,9 @@ import MedDataService from "../services/MedsDataService";
 const AddMed = () => {
   const initialMedState = {
     id: null,
-    drugcompany: "",
-    Drugbrandname: "",
-    Drugname: "",
+    drugcompany: "Perrigo New York Inc",
+    Drugbrandname: "Hydrocortisone",
+    Drugname: "Hydrocortisone",
     published: false
   };
   const [med, setMed] = useState(initialMedState);

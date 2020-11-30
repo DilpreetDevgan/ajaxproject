@@ -16,7 +16,7 @@ try{
 	
 });
 
-router.post("/",async(req,res)=>{
+router.post("/meds",async(req,res)=>{
 	const med = new Med({
 		drugcompany:req.body.drugcompany,
 		Drugbrandname:req.body.Drugbrandname,
