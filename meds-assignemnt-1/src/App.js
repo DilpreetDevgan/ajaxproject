@@ -13,6 +13,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import AddMed from "./components/AddMed";
 import Med from "./components/Med";
 import MedsList from "./components/MedsList";
+import AdminList from "./components/AdminList";
 import './css/as2_css.css';
 
 
@@ -25,7 +26,9 @@ function App() {
 		<Link to={"/meds"} className="nav-link">
 		Home </Link></a> |  
 <div class="dropdown">
-  <span><a href="admin.html">Admin</a></span>
+  <span><a href="admin.html">
+  <Link to={"/admin"} className="nav-link">
+  Admin </Link></a></span>
   <div class="dropdown-content">
     <p><a href="#">
      <Link to={"/Add new"} className="nav-link">
@@ -44,6 +47,7 @@ function App() {
 <div className="container mt-3">
         <Switch>
           <Route exact path={["/", "/meds"]} component={MedsList} />
+           <Route exact path={["/", "/admin"]} component={AdminList} />
           <Route exact path={["/meds","/Add new"]} component={AddMed} />
           <Route path="/meds/:id" component={Med} />
         </Switch>
