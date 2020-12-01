@@ -67,12 +67,12 @@ th {
 
 /* style even-numbered rows differently */
 tr:nth-child(even) {
-	/*background-color: #d2fff8;*/
+	background-color: #d2fff8;
 }
 
 /* style odd-numbered rows differently */
 tr:nth-child(odd) {
-	/*background-color:#c4f3ff;*/
+	background-color:#c4f3ff;
 }
 
 .dropdown {
@@ -149,4 +149,14 @@ position: fixed;
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+
+.centers{
+position: fixed;
+top:100px;
+right:40px;
+font-size: 40px;
+
+
 }

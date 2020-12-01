@@ -15,7 +15,7 @@ const create = data => {
 };
 
 const update = (id, data) => {
-  return http.put(`/meds/${id}`, data);
+  return http.put(`/${id}`, data);
 };
 
 const remove = id => {

@@ -42,13 +42,13 @@ export default class CreateMed extends Component {
   onSubmit(e) {
     e.preventDefault()
 
-    const studentObject = {
+    const MedObject = {
       drugcompany: this.state.drugcompany,
       Drugbrandname: this.state.Drugbrandname,
       Drugname: this.state.Drugname
     };
 
-    axios.post('http://localhost:5000/meds', studentObject)
+    axios.post('http://localhost:5000/meds',MedObject)
       .then(res => console.log(res.data));
 
     this.setState({
@@ -75,9 +75,9 @@ export default class CreateMed extends Component {
           <Form.Label id="dn">Drugname</Form.Label>
           <Form.Control type="text"   id="dname" value={this.state.Drugname} onChange={this.onChangeDrugname} />
         </Form.Group>
-        <Button variant="danger" size="lg" block="block" type="button" id="clr"/>
+        <Button variant="danger"  type="button"  id="clr">Clear</Button>
 
-        <Button variant="danger" size="lg" block="block" type="submit" id="sb">
+        <Button variant="danger"   type="submit" id="sb">
 
           Create Med
         </Button>

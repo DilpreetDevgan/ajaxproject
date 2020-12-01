@@ -9,30 +9,30 @@ import { ButtonGroup } from 'react-bootstrap';
 import { MenuItem } from 'react-bootstrap';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
-
-import AddMed from "./components/AddMed";
+import tutorialist  from "./components/list";
 import CreateMed from "./components/Addmed1";
 import Med from "./components/Med";
 import MedsList from "./components/MedsList";
-import AdminList from "./components/AdminList";
+
 import './css/as2_css.css';
+import TutorialsList from "./components/list";
 
 
 function App() {
   return (
     <div>
-    <div id="top_nav">
+    <div >
 	<nav>
 		<a href="index.html">
-		<Link to={"/meds"} className="nav-link">
+		<Link to={"/meds"} >
 		Home </Link></a> |  
 <div class="dropdown">
   <span><a href="admin.html">
-  <Link to={"/admin"} className="nav-link">
+  <Link  to={"/tutorials"}  >
   Admin </Link></a></span>
   <div class="dropdown-content">
     <p><a href="#">
-     <Link to={"/create-med"} className="nav-link">
+     <Link to={"/create-med"} >
  			 Add new
  			 </Link></a></p>
     
@@ -42,14 +42,13 @@ function App() {
 
 	</nav>
 </div>
-    
+
     
      
 <div className="container mt-3">
         <Switch>
           <Route exact path={["/", "/meds"]} component={MedsList} />
-           <Route exact path={["/", "/admin"]} component={AdminList} />
-          <Route exact path={["/meds","/Add new"]} component={AddMed} />
+          <Route exact path={["/", "/tutorials"]} component={TutorialsList} />
            <Route path="/create-med" component={CreateMed} />
           <Route path="/meds/:id" component={Med} />
         </Switch>
