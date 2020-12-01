@@ -35,10 +35,14 @@ const MedsList = () => {
  const renderBody = () => {
         return meds && meds.map(({ id, drugcompany, Drugbrandname, Drugname }) => {
             return (
+           
+            
                 <tr key={id}>
-                 
+                 		
                     <td>{drugcompany}</td>
+                    		
                     <td>{Drugbrandname}</td>
+                  
                     <td>{Drugname}</td>
                 </tr>
             )
@@ -48,11 +52,15 @@ const MedsList = () => {
     return (
         <>
             <h1 id='title'>Basic Med Information</h1>
-            <table id='med'>
+            <table id='med' class="center">
                 <thead>
                     <tr>{renderHeader()}</tr>
                 </thead>
                 <tbody>
+                <tr>	<td><input type="text" name="company" size="30" value="" /></td>
+            	<td><input type="text" name="brand_name" size="30" value="" /></td>
+           <td><input type="text" name="generic_name" size="30" value="" /></td>
+             </tr>  
                     {renderBody()}
                 </tbody>
                

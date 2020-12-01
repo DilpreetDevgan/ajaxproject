@@ -4,11 +4,11 @@ import MedDataService from "../services/MedsDataService";
 
 const AddMed = () => {
   const initialMedState = {
-    id: null,
+
     drugcompany: "Perrigo New York Inc",
     Drugbrandname: "Hydrocortisone",
     Drugname: "Hydrocortisone",
-    published: false
+    
   };
   const [med, setMed] = useState(initialMedState);
   const [submitted, setSubmitted] = useState(false);
@@ -57,7 +57,7 @@ const AddMed = () => {
           </button>
         </div>
       ) : (
-        <div>
+        <div class="center">
           <div className="form-group">
             <label htmlFor="Company">Drug Company</label>
             <input
@@ -65,7 +65,7 @@ const AddMed = () => {
               className="form-control"
               id="Company"
               required
-              defaultValue={med.drugcompany}
+            
               onChange={handleInputChange}
               name="Company"
             />
@@ -78,7 +78,7 @@ const AddMed = () => {
               className="form-control"
               id="bname"
               required
-              defaultValue={med.Drugbrandname}
+        
               onChange={handleInputChange}
               name="bname"
             />
@@ -91,7 +91,7 @@ const AddMed = () => {
               className="form-control"
               id="dname"
               required
-              defaultValue={med.Drugname}
+     
               onChange={handleInputChange}
               name="sname"
             />
