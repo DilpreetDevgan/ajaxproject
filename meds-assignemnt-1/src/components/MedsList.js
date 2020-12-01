@@ -57,9 +57,9 @@ const MedsList = () => {
                     <tr>{renderHeader()}</tr>
                 </thead>
                 <tbody>
-                <tr>	<td><input type="text" name="company" size="30" value="" /></td>
-            	<td><input type="text" name="brand_name" size="30" value="" /></td>
-           <td><input type="text" name="generic_name" size="30" value="" /></td>
+                <tr>	<td><input type="text" name="company" size="30"  /></td>
+            	<td><input type="text" name="brand_name" size="30"  /></td>
+           <td><input type="text" name="generic_name" size="30"  /></td>
              </tr>  
                     {renderBody()}
                 </tbody>
