@@ -11,6 +11,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
 
 import AddMed from "./components/AddMed";
+import CreateMed from "./components/Addmed1";
 import Med from "./components/Med";
 import MedsList from "./components/MedsList";
 import AdminList from "./components/AdminList";
@@ -31,7 +32,7 @@ function App() {
   Admin </Link></a></span>
   <div class="dropdown-content">
     <p><a href="#">
-     <Link to={"/Add new"} className="nav-link">
+     <Link to={"/create-med"} className="nav-link">
  			 Add new
  			 </Link></a></p>
     
@@ -49,6 +50,7 @@ function App() {
           <Route exact path={["/", "/meds"]} component={MedsList} />
            <Route exact path={["/", "/admin"]} component={AdminList} />
           <Route exact path={["/meds","/Add new"]} component={AddMed} />
+           <Route path="/create-med" component={CreateMed} />
           <Route path="/meds/:id" component={Med} />
         </Switch>
       </div>
