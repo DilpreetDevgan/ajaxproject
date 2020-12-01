@@ -13,6 +13,7 @@ import tutorialist  from "./components/list";
 import CreateMed from "./components/Addmed1";
 import Med from "./components/Med";
 import MedsList from "./components/MedsList";
+import EditMed from './components/EditMed';
 
 import './css/as2_css.css';
 import TutorialsList from "./components/list";
@@ -50,6 +51,7 @@ function App() {
           <Route exact path={["/", "/meds"]} component={MedsList} />
           <Route exact path={["/", "/tutorials"]} component={TutorialsList} />
            <Route path="/create-med" component={CreateMed} />
+           <Route path="/edit/:_id" component={EditMed} />
           <Route path="/meds/:id" component={Med} />
         </Switch>
       </div>

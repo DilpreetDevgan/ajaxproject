@@ -49,7 +49,12 @@ export default class CreateMed extends Component {
     };
 
     axios.post('http://localhost:5000/meds',MedObject)
-      .then(res => console.log(res.data));
+     
+      .then((res) => {
+        console.log(res.data);
+        this.props.history.push('/');
+       
+        })
 
     this.setState({
     drugcompany: '',

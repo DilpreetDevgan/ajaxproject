@@ -69,15 +69,15 @@ router.get("/:id", getMed, (req, res) => {
 
 //Update one record field by field using Patch route
 router.patch("/:id", getMed, async (req, res) => {
-  if (req.body.drug_company != null) {
-    res.med.drug_company = req.body.drug_company; //replace old entry with new entry
-  }
-  if (req.body.drug_brand_name != null) {
-    res.drug_brand_name = req.body.drug_brand_name;
-  }
-   if (req.body.drug_generic_name != null) {
-    res.drug_generic_name = req.body.drug_generic_name;
-  }
+  
+    res.drugcompany = req.body.drugcompany; //replace old entry with new entry
+  
+
+    res.Drugbrandname = req.body.Drugbrandname;
+  
+  
+    res.Drugname = req.body.Drugname;
+  
   
   try {
   	//try to save updates
@@ -111,8 +111,32 @@ router.delete("/:id", getMed, async (req, res) => {
   }
 });
 
-//export router to make it available to our app
-module.exports = router;
+
+
+ router.route('/:id').post(function (req, res) {
+Med.findById(req.params.id, function (err, med) {
+ if (!med)
+ return next(new Error('Unable To Find Med With This Id'));
+ else {
+ 
+   med.drugcompany = req.body.drugcompany; //replace old entry with new entry
+  
+
+    med.Drugbrandname = req.body.Drugbrandname;
+
+  
+    med.Drugname = req.body.Drugname;
+ 
+ med.save().then(emp => {
+ res.json('Employee Updated Successfully');
+ })
+ .catch(err => {
+ res.status(400).send("Unable To Update med");
+ });
+ }
+ });
+ });
+ 
 
 
 
