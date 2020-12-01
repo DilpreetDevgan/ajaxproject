@@ -80,6 +80,63 @@ tr:nth-child(odd) {
   display: inline-block;
 }
 
+.btn btn-success{
+	
+}
+
+#Company{
+	position: fixed;
+	top: 200px;
+	left: 700px;
+	font-size: 20px;
+}
+
+#bname{position: fixed;
+	top: 300px;
+	left: 700px;
+	font-size: 20px;
+	
+}
+#dname{position: fixed;
+	top: 400px;
+	left: 700px;
+	font-size: 20px;
+	
+}
+#dc{position: fixed;
+	top: 200px;
+	left: 400px;
+		font-size: 30px;
+
+}
+
+#bn{position: fixed;
+	top: 300px;
+	left :400px  ;        
+		font-size: 30px;}
+
+#dn{
+position: fixed;
+	top: 400px;
+	left: 400px;
+	font-size: 30px;	
+}
+
+#clr{
+	position: fixed;
+	top: 500px;
+	left: 700px;
+	font-size: 30px;
+}
+
+#sb{
+	position: fixed;
+	top: 500px;
+	left: 400px;
+	font-size: 30px;
+}
+
+
 .dropdown-content {
   display: none;
   position: absolute;

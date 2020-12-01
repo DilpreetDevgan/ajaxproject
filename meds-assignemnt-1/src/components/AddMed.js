@@ -59,7 +59,7 @@ const AddMed = () => {
       ) : (
         <div class="center">
           <div className="form-group">
-            <label htmlFor="Company">Drug Company</label>
+            <label  id="dc" htmlFor="Company">Drug Company</label>
             <input
               type="text"
               className="form-control"
@@ -72,7 +72,7 @@ const AddMed = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="brand_name">Drug Brand name</label>
+            <label id="bn" htmlFor="brand_name">Drug Brand name</label>
             <input
               type="text"
               className="form-control"
@@ -85,7 +85,7 @@ const AddMed = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="drug_name">Drug  Name</label>
+            <label id="dn" htmlFor="drug_name">Drug  Name</label>
             <input
               type="text"
               className="form-control"
@@ -93,16 +93,16 @@ const AddMed = () => {
               required
      
               onChange={handleInputChange}
-              name="sname"
+              name="dname"
             />
           </div>
           
-          <button onClick={saveMed} className="btn btn-success">
+          <button onClick={saveMed} className="btn btn-success" id="sb">
             Submit
           </button>
            &nbsp;  &nbsp;
         
-          <button className="btn btn-success">Clear</button>
+          <button className="btn btn-success" id="clr">Clear</button>
           
           
         </div>
