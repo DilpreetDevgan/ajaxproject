@@ -27,7 +27,7 @@ const remove = id => {
 };*/
 
 const findByDrugbrandname = Drugbrandname => {
-  return http.get(`/meds?Drugbrandname=${Drugbrandname}`);
+  return http.get(`/?Drugbrandname=${Drugbrandname}`);
 };
 
 const findByDrugname = Drugname => {

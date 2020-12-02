@@ -3,14 +3,17 @@ import React, { useState, useEffect } from "react";
 import MedDataService from "../services/MedsDataService";
 import { Link } from "react-router-dom";
 
+
+
 const MedsList = () => {
   const [meds, setMeds] = useState([]);
- /* const [currentPlant, setCurrentPlant] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(-1);
-  const [searchCName, setSearchCName] = useState("");*/
+  const[q,setQ] = useState([]); // this is for searching by drug company
+  const[p,setP] = useState([]); //this is for searching by Drugbrandname
+  const[m,setM] = useState([]); //this is for searching by Drugname
 
   useEffect(() => {
-    retrieveMeds()
+    retrieveMeds();
+    
   }, []);
   
     const retrieveMeds = () => {
@@ -23,6 +26,40 @@ const MedsList = () => {
         console.log(e);
       });
   };
+
+ 
+  
+function drugcompa(drugcompany,Drugbrandname,Drugname){
+if(drugcompany.indexOf(q)>-1){                        //drugcompany.toLowerCase().indexOf(q)>-1
+return( 
+  <td>{drugcompany}</td>
+);
+
+}
+
+//drugcompany + Drugbrandname + Drugname ;
+}
+function drugcompan(drugcompany,Drugbrandname,Drugname){
+  if(drugcompany.indexOf(q)>-1){                        //drugcompany.toLowerCase().indexOf(q)>-1
+  return( 
+    <td>{Drugbrandname}</td>
+  );
+  }
+ 
+  }
+  function drugcompans(drugcompany,Drugbrandname,Drugname){
+    if(drugcompany.indexOf(q)>-1){                        //drugcompany.toLowerCase().indexOf(q)>-1
+    return( 
+      <td>{Drugname}</td>
+    );
+    }
+   
+    }
+
+
+  
+
+
   
    const renderHeader = () => {
         let headerElement = ['Drug Company ', '  Drug Brand Name  ', ' Drug Name  '  ]
@@ -34,16 +71,19 @@ const MedsList = () => {
     
  const renderBody = () => {
         return meds && meds.map(({ id, drugcompany, Drugbrandname, Drugname }) => {
+
+     
             return (
-           
-            
+                 
+               
                 <tr key={id}>
                  		
-                    <td>{drugcompany}</td>
-                    		
-                    <td>{Drugbrandname}</td>
-                  
-                    <td>{Drugname}</td>
+                 {drugcompa(drugcompany,Drugbrandname,Drugname)}
+                 {drugcompan(drugcompany,Drugbrandname,Drugname)}
+                 {drugcompans(drugcompany,Drugbrandname,Drugname)}
+             
+
+                                        
                 </tr>
             )
         })
@@ -57,13 +97,15 @@ const MedsList = () => {
                     <tr>{renderHeader()}</tr>
                 </thead>
                 <tbody>
-                <tr>	<td><input type="text" name="company" size="30"  /></td>
-            	<td><input type="text" name="brand_name" size="30"  /></td>
-           <td><input type="text" name="generic_name" size="30"  /></td>
-             </tr>  
-                    {renderBody()}
+                <tr>	<td><input type="text" name="company" size="30"  value={q} onChange={(e)=> setQ(e.target.value)}/></td>
+            	<td><input type="text"  size="30"  value={p} onChange={(e)=> setP(e.target.value)} /></td>
+           <td><input type="text" size="30"  value={m} onChange={(e)=> setM(e.target.value)} /></td>
+         
+             </tr> 
+             
+                  {renderBody()}
+                
                 </tbody>
-               
             </table>
         </>
     )

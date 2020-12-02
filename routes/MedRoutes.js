@@ -143,6 +143,4 @@ Med.findById(req.params.id, function (err, med) {
 
 
 
-
-
 module.exports = router;

@@ -38,6 +38,7 @@ function App() {
  			 </Link></a></p>
     
     <p><a href="admin.html">Edit/delete</a></p>
+ 
   </div>
 </div>
 
@@ -53,6 +54,7 @@ function App() {
            <Route path="/create-med" component={CreateMed} />
            <Route path="/edit/:_id" component={EditMed} />
           <Route path="/meds/:id" component={Med} />
+        
         </Switch>
       </div>
       
