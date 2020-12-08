@@ -98,8 +98,8 @@ export default class BreakingBadList extends Component {
              <td>{bad.portrayed}</td>
              <td>{bad.nickname}</td>
 
-          <td> <button   onClick={ () => this.deleteBads(bad._id,bad.name)} >Delete</button></td>
-              <td><a href={"/edit/" + bad._id} className="btn btn-primary">Edit</a></td>
+          <td> <button   onClick={ () => this.deleteBads(bad._id,bad.name)} className="ClassDeleteButton">Delete</button></td>
+              <td><a href={"/edit/" + bad._id} className="btn btn-primary"><button className="ClassEditButton">Edit</button></a></td>
                  
 
                

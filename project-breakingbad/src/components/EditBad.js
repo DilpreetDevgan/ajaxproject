@@ -144,7 +144,8 @@ id="Company"
  type="submit"
  value="Confirm "
  id="sbs"
- className="btn btn-primary"
+ className ="CreateCharacterButton_ID"
+
  />
  </form>
  </div>

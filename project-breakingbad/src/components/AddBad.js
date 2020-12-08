@@ -17,6 +17,7 @@ export default class CreateBad extends Component {
     this.onChangestatus = this.onChangestatus.bind(this);
     this.onChangeportrayed = this.onChangeportrayed.bind(this);
     this.onChangenickname = this.onChangenickname.bind(this);
+    this.onChangeimg = this.onChangeimg.bind(this);
 
     this.onSubmit = this.onSubmit.bind(this);
 
@@ -25,7 +26,8 @@ export default class CreateBad extends Component {
       name: '',
       status :'',
       portrayed: '',
-      nickname:''
+      nickname:'',
+      img:''
     }
   }
 
@@ -45,6 +47,9 @@ export default class CreateBad extends Component {
   onChangenickname(e) {
     this.setState({ nickname: e.target.value })
   }
+  onChangeimg(e) {
+    this.setState({ img: e.target.value })
+  }
 
 
   onSubmit(e) {
@@ -54,7 +59,8 @@ export default class CreateBad extends Component {
       name: this.state.name,
       status: this.state.status,
       portrayed: this.state.portrayed,
-      nickname: this.state.nickname
+      nickname: this.state.nickname,
+      img:this.state.img
     };
 
     axios.post('http://localhost:5000/bads',BadObject)
@@ -69,7 +75,8 @@ export default class CreateBad extends Component {
       name: '',
       status :'',
       portrayed: '',
-      nickname:''
+      nickname:'',
+      img:''
 
     });
   }
@@ -80,28 +87,32 @@ export default class CreateBad extends Component {
         <h1>Add More Characters U want </h1>
         <Form.Group >
           <Form.Label id="dc"> Name</Form.Label>
-          <Form.Control type="text" id="Company" value={this.state.name} onChange={this.onChangename} />
+          <Form.Control type="text" className="AddCharacter_Input" id="Company" value={this.state.name} onChange={this.onChangename} />
         </Form.Group>
 
         <Form.Group >
           <Form.Label id="bn">Status</Form.Label>
-          <Form.Control  id="bname" type="text" value={this.state.status} onChange={this.onChangestatus} />
+          <Form.Control  id="bname" className="AddCharacter_Input" type="text" value={this.state.status} onChange={this.onChangestatus} />
         </Form.Group>
 
         <Form.Group >
           <Form.Label id="dn">Portrayed</Form.Label>
-          <Form.Control type="text"   id="dname" value={this.state.portrayed} onChange={this.onChangeportrayed} />
+          <Form.Control type="text" className="AddCharacter_Input"   id="dname" value={this.state.portrayed} onChange={this.onChangeportrayed} />
         </Form.Group>
 
         <Form.Group >
           <Form.Label  id="ln">Nickname</Form.Label>
-          <Form.Control type="text"   id="lname"  onChange={this.onChangenickname}  value={this.state.nickname} />
+          <Form.Control type="text" className="AddCharacter_Input"  id="lname"  onChange={this.onChangenickname}  value={this.state.nickname} />
+        </Form.Group>
+        <Form.Group >
+          <Form.Label id="imgs" >Photo</Form.Label>
+          <Form.Control id="imginput" type="text"  className="AddCharacter_Input"   onChange={this.onChangeimg}  value={this.state.img} />
         </Form.Group>
 
 
-        <Button variant="danger"   type="submit" id="sb">
+        <Button variant="danger"  className ="CreateCharacterButton_ID" type="submit" id="sb">
 
-          Create Character For Breaking Bad 
+          Create 
         </Button>
       </Form>
     </div>);

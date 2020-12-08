@@ -24,7 +24,7 @@ function App() {
   return (
     <div>
     <div >
-	<nav>
+	<nav class="nav">
 		<a href="index.html">
 		<Link to={"/bads"} >
 		Home </Link></a> |  
@@ -38,7 +38,7 @@ function App() {
  			 Add new
  			 </Link></a></p>
     
-    <p><a href="admin.html">Edit/delete</a></p>
+    <p><a href="admin.html"> <Link  to={"/badslist"}  >Edit/delete</Link></a></p>
  
   </div>
 </div>

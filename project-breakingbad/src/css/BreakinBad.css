@@ -1,13 +1,114 @@
-/*AS2 Template CSS */
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
 			body{background-color: #aaffff;
-			/*margin-left: 50px;*/
+			
+			font-family: 'Concert One', cursive;
 			}
 			h1{
 				text-align: center;
 				color:navy;
 				font-size:32pt;
 			}
+			.ClassEditButton{
+				background-color:white; /* Green */
+				border: none;
+				color: black;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				border: 2px solid #4CAF50;
+				border-radius: 20px;
+				font-family: 'Concert One', cursive;
+				transition-duration: 0.4s;
+			  }
 			
+			  .ClassEditButton:hover {
+				background-color: #4CAF50;
+				box-shadow:3px 3px 4px #4CAF50;
+				color:white;
+				font-size: 17px;
+			  }
+			  .AddCharacter_Input[type=text] {
+				width: 450px;
+				padding: 12px 20px;
+				margin: 8px 0;
+				box-sizing: border-box;
+				border: 2px solid gray;
+				background:  #b3ffab;
+				color: black;
+				border-radius: 15px;
+			  }
+		
+		
+			input[type=text] {
+				width: 250px;
+				padding: 12px 20px;
+				margin: 8px 0;
+				box-sizing: border-box;
+				border: 2px solid gray;
+				background:  #b3ffab;
+				color: black;
+				border-radius: 15px;
+			  }
+		
+		table{
+				background: linear-gradient(to right, #25c481, #25b7c4);
+		}
+		
+		.CreateCharacterButton_ID{
+			background-color: black;
+			color:orangered;
+			
+			border-radius: 25px;
+			margin-top: -20px;
+			padding:20px;
+			
+			
+			
+		}
+		
+		.CreateCharacterButton_ID:hover{
+			background-color: black;
+			color:green;
+			
+			border-radius: 25px;
+			margin-top: -20px;
+			padding:20px;
+			
+			
+			
+		}
+		
+		tr:hover {
+				background: linear-gradient(to right, #b3ffab, #12fff7);}
+			
+			  .ClassDeleteButton{
+				background-color:white; /* Green */
+				border: none;
+				color: black;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				border: 2px solid red;
+				border-radius: 20px;
+				font-family: 'Concert One', cursive;
+				transition-duration: 0.4s;
+			  }
+			
+			  .ClassDeleteButton:hover {
+				  background-color: red;
+				  box-shadow:3px 3px 4px red;
+				  color:white;
+				  font-size: 17px;
+				}
 			h2{
 				text-align: center;
 				color:navy;
@@ -18,7 +119,7 @@
 				padding-left:250px;
 			}
 			
-			nav {
+			.nav {
 		background-color: #55aaff;
 		padding-top: 5px;
 		padding-bottom: 5px;
@@ -86,38 +187,38 @@ tr:nth-child(odd) {
 
 #Company{
 	position: fixed;
-	top: 200px;
+	top: 150px;
 	left: 700px;
 	font-size: 20px;
 }
 
 #bname{position: fixed;
-	top: 300px;
+	top: 250px;
 	left: 700px;
 	font-size: 20px;
 	
 }
 #dname{position: fixed;
-	top: 400px;
+	top: 350px;
 	left: 700px;
 	font-size: 20px;
 	
 }
 #dc{position: fixed;
-	top: 200px;
+	top: 150px;
 	left: 500px;
 		font-size: 30px;
 
 }
 
 #bn{position: fixed;
-	top: 300px;
+	top: 250px;
 	left :500px  ;        
 		font-size: 30px;}
 
 #dn{
 position: fixed;
-	top: 400px;
+	top: 350px;
 	left: 500px;
 	font-size: 30px;	
 }
@@ -129,17 +230,19 @@ position: fixed;
 	font-size: 30px;
 }
 
+
+
 #sb{
 	position: fixed;
-	top: 600px;
-	left: 400px;
+	top: 640px;
+	left: 500px;
 	font-size: 30px;
 }
 
 #sbs{
 	position: fixed;
-	top: 300px;
-	right: 300px;
+	top: 600px;
+	left: 550px;
 	font-size: 60px;
 }
 
@@ -175,7 +278,7 @@ width: 154px;
 
 #ln{
 	position: fixed;
-	top: 500px;
+	top: 450px;
 	left: 500px;
 	font-size: 30px;
 
@@ -183,7 +286,7 @@ width: 154px;
 
 #lname{
 	position: fixed;
-	top: 500px;
+	top: 450px;
 	left: 700px;
 	font-size: 20px;
 }
@@ -199,3 +302,46 @@ width: 364px;
 
 
 }
+
+
+
+.paginations {
+	display: inline-block;
+	position: relative;
+	left: 440px;
+  }
+
+  
+  li{
+	display: inline-block;
+	cursor: pointer;
+	padding: 1px ;
+	
+	border: 1px solid #55aaff;
+	color: black;
+  }
+ 
+
+ .as{
+	 font-size: 30px;
+	border: 1px solid #55aaff;
+  }
+  
+
+  #imgs{
+	position: fixed;
+	top: 540px;
+	left: 500px;
+	font-size: 30px;
+
+  }
+
+
+  #imginput{
+	position: fixed;
+	top: 540px;
+	left: 700px;
+	font-size: 30px;
+
+  }
+  
